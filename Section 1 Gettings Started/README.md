@@ -32,6 +32,30 @@
 
 5. `ng serve` Run development server
     - `ctlr + c` to stop process
+- No need to restart after every change, automatically rebuilds
 `package.json` describes dependencies
     - `node_modules` is folder for these dependency binaryes
 
+- With Angular you can mix static HMTL and dynamic Angular compoments with data biding
+
+- `{{ title }}` databinding to hmtl, this title is defined in app.component.ts `title = 'mun super äppi';`
+
+-  `(ngModel="name")` directive in Angular, `<input type="text" [(ngModel)]="name">`
+    - Listen input and put it into to this input. **Two way databinding**
+- Angular is build into different modules, remember to import needed goods
+- `app.module.ts` tells Angular which pieces we want it to our application
+
+<img src="importErrorProblem.PNG" alt="alt text" width="600"/>
+
+- to fix remember import NgModule
+    - `import { NgModule } from '@angular/core';`
+
+- TS needs imports at top of file alaways
+
+<img src="importsAngular.PNG" alt="alt text" width="600"/>
+
+- 1. not connected import which is in top of ts files
+    - Understood in Angular what to get into use
+
+- TypeScript is not ran in the browser
+    - Compilation is carried out by **CLI**. For this reason we always need project to write TS.TypeScript is compiled to JavaScript

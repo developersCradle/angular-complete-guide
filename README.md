@@ -14,7 +14,7 @@ Insert certificate here when completed
 ## Progress
 
 - [x] [Section 01](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%201%20Gettings%20Started) - Getting Started
-- [ ] Section 02 - The Basics 
+- [ ] [Section 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics) - The Basics 
 - [ ] Section 03 - 
 - [ ] Section 04 - 
 - [ ] Section 05 - 

@@ -135,3 +135,29 @@ app-servers.component.html
 ```
 - We can also nest other components as manytimes we want 
     - now we just use `<app-servers></app-servers>` to get two app-server components
+
+- We can use inline template where we can use html insde ts code
+
+- Each component **needs** **template** to have defined `templateUrl: './servers.component.html'` or `template`
+    - We can use these in following manner(redline should be ignore!)
+
+<img src="templateBefore.JPG" alt="alt text" width="800"/>
+
+- Use external if much code
+
+<img src="templateBefore.JPG" alt="alt text" width="800"/>
+
+- Using `template`, we could use both ways defining template. This could be good if not so much code
+
+<img src="definingCss.JPG" alt="alt text" width="800"/>
+
+- We can define css for component multiline inline using  ` `` `
+    - Or using  array notation multiple css files `styleUrls: ['./app.component.css', 'test.css']`
+- Using file vs inline depends on how much code like in previous case
+
+<img src="waysSelectingComponent.JPG" alt="alt text" width="800"/>
+
+- different ways making selector
+    - .class selector
+    - by defining attribute
+    - typical selector

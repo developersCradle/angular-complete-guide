@@ -161,3 +161,18 @@ app-servers.component.html
     - .class selector
     - by defining attribute
     - typical selector
+
+<img src="Databinding.JPG" alt="alt text" width="800"/>
+
+
+- Databinging is communication
+    - Fetch from server, or finished some calculation
+    - We can pass data from Ts code into HTML code inside Template
+    - Outputting data to hmtl template:
+    - **String Interpolation** `({{ data }})`
+    - **Property Binding** `([property]="data")`
+    - Reacting to user:
+    - **Event Binding** `((event)="expression")`
+
+    - **Two-Way-Binding** `([(ngModel)]="data")`
+        - React to events and outputting stuff in same time

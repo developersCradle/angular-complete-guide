@@ -67,9 +67,11 @@ export class ServerCompoment {
         - Angular has many packages, one of which have many core features is `@angular/core`
 
 ```
+
 @Component({
-  selector: 'app-server', //Should use unique select
+  selector: 'app-server', //Should use unique selector
 })
+
 ```
 - We can pass JS object to configure angular decorator
     - Will be stored as **metadata** for this class
@@ -127,6 +129,7 @@ export class AppModule { }
 
 
 ```
+
 app-servers.component.html
 
 <app-server></app-server>
@@ -145,7 +148,7 @@ app-servers.component.html
 
 - Use external if much code
 
-<img src="templateBefore.JPG" alt="alt text" width="800"/>
+<img src="templateAfter.JPG" alt="alt text" width="800"/>
 
 - Using `template`, we could use both ways defining template. This could be good if not so much code
 
@@ -157,7 +160,7 @@ app-servers.component.html
 
 <img src="waysSelectingComponent.JPG" alt="alt text" width="800"/>
 
-- different ways making selector
+- Different ways making selector
     - .class selector
     - by defining attribute
     - typical selector
@@ -170,6 +173,11 @@ app-servers.component.html
     - We can pass data from Ts code into HTML code inside Template
     - Outputting data to hmtl template:
     - **String Interpolation** `({{ data }})`
+        - `{{ }}` String Interpolation syntax
+        - between curly braces you need to put typescript expresion
+        - `<p> {{'server'}} with ID {{ serverId }} is {{ serverStatus }}</p>`
+        - In the end, returned type needs to be string
+            - `{{'server'}}` is returning string  and `{{ serverStatus }}` is type defined inside Component .ts file. Or coul be function ``{{ getServerStatus() }}`
     - **Property Binding** `([property]="data")`
     - Reacting to user:
     - **Event Binding** `((event)="expression")`

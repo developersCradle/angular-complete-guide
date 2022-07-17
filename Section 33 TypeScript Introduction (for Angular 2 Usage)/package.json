@@ -1,0 +1,15 @@
+{
+  "name": "section-33-typescript-introduction-(for-angular-2-usage)",
+  "version": "1.0.0",
+  "description": "TypeScript Introduction (for Angular 2 Usage)",
+  "main": "no-typescript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}

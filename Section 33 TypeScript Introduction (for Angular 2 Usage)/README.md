@@ -112,11 +112,46 @@ person = {
   - We can combine this this to strings also, notice `[]` in the end
     - Following tells arrays contains these object with these types inside
 
-````
+```
 
 let personsArray : {
     name : string,
     age : number;
 }[]; // personsArray contains array these objects
+
+```
+
+- Ts assings type to variable behind scenes, if you forget to do so. Actually this is preferred, since it saves time 
+
+```
+
+//Type inference
+let course = 'React' //This is same as, " let course : string = 'React' "
+course = 2231; //Error coz ts uses behind scenes type inference
+
+```
+
+- **Union types**, type allows more than 1 type
+
+```
+let unionType : string | number = "React";
+unionType = 1212;
+```
+- `unionType` is now allowed to have **string** or **number**
+
+- `type` alias does not exist in standard js, its from TypeScript
+
+- Using type alias, saves not using type again
+
+```
+
+type Person = {
+    name : string;
+    age : number;
+};
+
+let person1 : Person; //now person1 is type Person
+//also possible
+let peopleArray : Person[]; // now personArray is type Person array
 
 ```

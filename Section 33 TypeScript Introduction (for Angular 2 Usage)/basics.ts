@@ -39,3 +39,33 @@ person = {
     name : 'Max',
     age: 32 
 };
+
+
+let personsArray : {
+    name : string,
+    age : number;
+}[]; // Ts objec type defination syntax
+
+//Type inference
+let course = 'React' //This is same as, " let course : string = 'React' "
+course = 2231; //Error coz ts uses behind scnenes type inference
+
+//Union types, type allows more than 1 type
+
+let unionType : string | number = "React";
+unionType = 1212;
+
+
+
+type Person = {
+    name : string;
+    age : number;
+};
+
+let person1 : Person; // No need to define Person again here when using type alias
+
+// Function & types
+
+function add(a : number,b : number) {
+    return a+b;
+}

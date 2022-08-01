@@ -155,3 +155,29 @@ let person1 : Person; //now person1 is type Person
 let peopleArray : Person[]; // now personArray is type Person array
 
 ```
+
+- Allow numbers into function
+
+```
+
+function add(a : number,b : number) { 
+    return a+b; //infer type to return, ts will have to figure this out 
+}
+
+```
+- Ts will infer this return type, as in following picture from IDE. In this case number
+
+<img src="inferType.PNG" alt="alt text" width="800"/>
+
+- **OR**
+- Telling return value with union type `: number | string ` or with one type `: number`. Both possible
+```
+
+function add(a : number,b : number) : number | string { 
+    return a+b; //
+}
+
+```
+- If **no reason** to spesify type, should let Ts to infer the return type
+
+- `: void` will return nothing in case of function defination

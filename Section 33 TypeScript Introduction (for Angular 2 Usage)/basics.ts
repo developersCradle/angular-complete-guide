@@ -66,6 +66,17 @@ let person1 : Person; // No need to define Person again here when using type ali
 
 // Function & types
 
-function add(a : number,b : number) {
+function add(a : number,b : number) { // Will implicit inferet
     return a+b;
 }
+
+
+// return values
+function add2(a : number,b : number) : string | number { // Returning union type
+    return a+b;
+}
+
+
+
+// Generics
+

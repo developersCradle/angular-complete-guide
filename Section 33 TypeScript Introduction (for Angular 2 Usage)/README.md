@@ -94,7 +94,7 @@ person = {
   
 ```
   - We can use TypeScript object type defination syntax, `{}` and to use it `let person : {};`
-    - We are defining structure of an object, like `struct`:s in c++
+    - We are defining structure of an object, like `struct` keyword in c++
     - Using defining structure of an object
 ```
 
@@ -181,3 +181,45 @@ function add(a : number,b : number) : number | string {
 - If **no reason** to spesify type, should let Ts to infer the return type
 
 - `: void` will return nothing in case of function defination
+
+
+- Generics will come in handy in following scenario
+
+```
+
+function insertAtBeginning(array : any[], value : any)
+{
+    const newArray = [value, ...array]; //Spread operator
+    return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+// const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
+
+```
+
+<img src="generics.PNG" alt="alt text" width="800"/>
+
+- Ts does not know what kind of values `updatedArray` would hold.  
+
+- Problem comes if one would use such `insertAtBeginning()` helper function with numbers and then happens to call `updatedArray[0].split('');` on an **number**(gives run time error), this would work if `updatedArray` would be full of **strings!**
+
+- Here generics comes help. Generics are from **TypeSript** feature `<>`
+  - Same code, but with **generics**
+
+```
+
+function insertAtBeginning<T>(array : T[], value : T) // Same with generics
+{
+    const newArray = [value, ...array]; //Spread operator
+    return newArray;
+}
+
+```
+
+<img src="genericsAtWork.PNG" alt="alt text" width="800"/>
+
+- Now Ts knows that we are working with array of **numbers**, and won't let uss call string related funtions like `split()`
+

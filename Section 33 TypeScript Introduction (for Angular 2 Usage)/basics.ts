@@ -80,3 +80,23 @@ function add2(a : number,b : number) : string | number { // Returning union type
 
 // Generics
 
+// function insertAtBeginning(array : any[], value : any)
+// {
+//     const newArray = [value, ...array]; //Spread operator
+//     return newArray;
+// }
+
+function insertAtBeginning<T>(array : T[], value : T) // Same with generics
+{
+    const newArray = [value, ...array]; //Spread operator
+    return newArray;
+}
+
+
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+// const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
+
+updatedArray[0].slit(''); // Error

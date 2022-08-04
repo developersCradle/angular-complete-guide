@@ -223,3 +223,82 @@ function insertAtBeginning<T>(array : T[], value : T) // Same with generics
 
 - Now Ts knows that we are working with array of **numbers**, and won't let uss call string related funtions like `split()`
 
+- Making class in ts/js
+
+```
+
+class Student {
+    // firstName: string;
+    // lastName: string;
+    // age: number;
+    // private courses: string[];
+  
+    constructor(
+      public firstName: string,
+      public lastName: string,
+      public age: number,
+      private courses: string[]
+    ) {}
+  
+    enrol(courseName: string) { // Method, no function keyword!
+      this.courses.push(courseName);
+    }
+  
+    listCourses() {
+      return this.courses.slice();
+    }
+  }
+  
+  const student = new Student('Max', 'Schwarz', 32, ['Angular']);
+  student.enrol('React');
+  
+  ```
+
+  - Making method, remember not use **function keyword**
+
+  ```
+
+   enrol(courseName: string) { // Method, no function keyword!
+      this.courses.push(courseName);
+    }
+
+  ```
+
+ - These are the same
+ 
+ ``` 
+ 
+  class Student {
+  // firstName: string;
+  // lastName: string;
+  // age: number;
+  // private courses: string[];
+
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public age: number,
+    private courses: string[]
+  ) {}
+}
+
+```
+
+- And this
+
+```
+
+class Student {
+  // firstName: string;
+  // lastName: string;
+  // age: number;
+  // private courses: string[];
+
+  constructor(
+     firstName: string,
+     lastName: string,
+     age: number,
+    courses: string[]
+  ) {}
+
+```

@@ -100,3 +100,63 @@ const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
 // const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
 
 updatedArray[0].slit(''); // Error
+
+
+class Student {
+    firstName: string;
+    lastName: string;
+    age: number;
+    private courses: string[];
+  
+    constructor(
+       firstName: string,
+       lastName: string,
+       age: number,
+       courses: string[]
+    ) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.courses = courses;
+
+    }
+  
+    enrol(courseName: string) {
+      this.courses.push(courseName);
+    }
+  
+    listCourses() {
+      return this.courses.slice();
+    }
+  }
+  
+  const student = new Student('Max', 'Schwarz', 32, ['Angular']);
+  student.enrol('React');
+  // student.listCourses(); => Angular, React
+  
+  // student.courses => Angular, React
+  
+  interface Human {
+    firstName: string;
+    age: number;
+  
+    greet: () => void;
+  }
+  
+  let max: Human;
+  
+  max = {
+    firstName: 'Max',
+    age: 32,
+    greet() {
+      console.log('Hello!');
+    },
+  };
+  
+  class Instructor implements Human {
+    firstName: string;
+    age: number;
+    greet() {
+      console.log('Hello!!!!');
+    }
+  }

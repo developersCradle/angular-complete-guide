@@ -174,12 +174,19 @@ app-servers.component.html
     - Outputting data to hmtl template:
     - **String Interpolation** `({{ data }})`
         - `{{ }}` String Interpolation syntax
-        - between curly braces you need to put typescript expresion
+        - Between curly braces you need to put typescript expresion
         - `<p> {{'server'}} with ID {{ serverId }} is {{ serverStatus }}</p>`
         - In the end, returned type needs to be string
             - `{{'server'}}` is returning string  and `{{ serverStatus }}` is type defined inside Component .ts file. Or coul be function ``{{ getServerStatus() }}`
+            - Number can be also converted into string in the end
+            <img src="number.PNG" alt="alt text" width="600"/>
+
     - **Property Binding** `([property]="data")`
-    - Reacting to user:
+    - `[]` square brackets tells angular that we are using **Property Binding**
+        - Binds field/state to attribute 
+        - example`[disabled]=!allowNewServer` binding to disable, `allowNewServer`attribute
+        - Angular works directly on the DOM property and not the HTML attribute.
+        - We can also bind to different things, example directives or Angular components. Not always to html element propertyes
     - **Event Binding** `((event)="expression")`
 
     - **Two-Way-Binding** `([(ngModel)]="data")`

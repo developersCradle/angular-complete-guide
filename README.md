@@ -45,5 +45,5 @@ Insert certificate here when completed
 - [ ] Section 30 - 
 - [ ] Section 31 - 
 - [ ] Section 32 - 
-- [ ] [Section 33](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2033%20TypeScript%20Introduction%20(for%20Angular%202%20Usage)) -  TypeScript Introduction (for Angular 2 Usage)
+- [x] [Section 33](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2033%20TypeScript%20Introduction%20(for%20Angular%202%20Usage)) -  TypeScript Introduction (for Angular 2 Usage)
 - Add more when time comes

@@ -302,3 +302,66 @@ class Student {
   ) {}
 
 ```
+
+- **Interfaces** are typescript feature
+  - In typescript these are representing any object what we would wana make. Example **human Object**
+  - We only define types, not the behaviour
+
+```  
+
+  interface Human {
+    firstName: string; // variables inside interface, not like in java
+    age: number; // variables inside interface, not like in java
+  
+    greet: () => void; //method insede interface
+  }
+
+```
+- Implementing interface
+
+```
+ let max: Human;
+  
+  max = {
+    firstName: 'Max',
+    age: 32,
+    greet() {
+      console.log('Hello!');
+    },
+  };
+  
+  ```
+  - Max needs to have **same** fields as in **interface** to work
+    - Why need **interface** if we have **type** keyword also???
+      - One of best reasons is that **interaces** forces classes to implement them
+
+  - This would also work, interface replaced with type keyword
+  
+  ```
+    
+  type Human =  {
+    firstName: string;
+    age: number;
+  
+    greet: () => void;
+  }
+
+  ``` 
+
+  - Implementing interface to class
+
+  ```
+  
+    class Instructor implements Human {
+    firstName: string;
+    age: number;
+    greet() {
+      console.log('Hello!!!!');
+    }
+  }
+  
+  ```
+
+  - Configuring ts compiler `npx tsc --init`, to make **tsconfig.json**
+    - No need to make this when using Angular, its automatic
+    - tsconfig.json has many important fields, dive deep and explore when needed! 

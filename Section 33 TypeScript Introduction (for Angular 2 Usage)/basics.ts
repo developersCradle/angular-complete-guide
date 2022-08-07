@@ -136,7 +136,7 @@ class Student {
   
   // student.courses => Angular, React
   
-  interface Human {
+  type Human =  {
     firstName: string;
     age: number;
   

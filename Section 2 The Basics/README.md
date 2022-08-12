@@ -191,3 +191,40 @@ app-servers.component.html
 
     - **Two-Way-Binding** `([(ngModel)]="data")`
         - React to events and outputting stuff in same time
+
+- Same results can be achieved using **Property Biding** or **String Interpolation**
+
+```
+
+<p>{{ allowNewServer }} </p><!--  Same results can be achieved -->
+<p [innerText]="allowNewServer"></p>  <!--  Same results can be achieved -->
+
+```
+
+- **innerText** of element is text between opening and closing tag 
+- Printing so text you should use c, change some property use **Property Binding**
+    - DONT MIX THESE
+
+```
+
+<p [innerText]="{{allowNewServer}}"></p>
+
+``` 
+- There is no **String Interpolation** inside  **Property Biding**  
+
+- Inside **Property Biding**  you need write valid ts code 
+
+<img src="stringInterpolation.PNG" alt="alt text" width="800"/>
+
+- **Event binding**
+    - We could use **HTML Event Biding** `onclick="some"`
+
+```
+
+<button class="btn btn-primary"
+[disabled]="!allowNewServer"
+onclick="some">Add
+
+```
+- But, we are going to use **Angulars** Event Binding
+    - **Event Binding** Syntax `()` -> `(click)="onCreateServer()"` -> onCreateServer() method which to execute

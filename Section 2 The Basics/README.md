@@ -226,5 +226,38 @@ app-servers.component.html
 onclick="some">Add
 
 ```
+
 - But, we are going to use **Angulars** Event Binding
     - **Event Binding** Syntax `()` -> `(click)="onCreateServer()"` -> onCreateServer() method which to execute
+- Reversed variable name `$event`works only inside event binding
+
+```
+(input)="onUpdateServerName($event)"
+```
+- `$event` holds data and can be passed to click handler
+
+<img src="argumentWorks.PNG" alt="alt text" width="800"/>
+
+- `$event` works **only** between theese two **"** marks
+
+- Handling/Catching event in ts code
+
+```
+
+  onUpdateServerName(event : Event)
+  {
+    console.log(event);
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+ ```
+
+- Event logged insde chrome console
+
+ <img src="InputEventInConsole.PNG" alt="alt text" width="400"/>
+
+- **target** is **hmtl element** where event was occured
+    - **target.value** is what user entered
+    - **.value** works only if event is type **IntputElement**
+- For this reason we need to tell Ts this is type InputElement explicitly casting it `(<HTMLInputElement>event.target)`
+- With this we can fetch input data and output into html temple if needed

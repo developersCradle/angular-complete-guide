@@ -261,3 +261,26 @@ onclick="some">Add
     - **.value** works only if event is type **IntputElement**
 - For this reason we need to tell Ts this is type InputElement explicitly casting it `(<HTMLInputElement>event.target)`
 - With this we can fetch input data and output into html temple if needed
+
+ <img src="twoWayDatabinding.PNG" alt="alt text" width="600"/>
+
+
+- Two-way databinding
+    - Using both **Property Binding** and **Event Binding** syntax `[()]` 
+- `ngModel` is **Directive**
+
+```
+<input 
+type="text" 
+ class="form-control" 
+ [(ngModel)="serverName"]>
+```
+- If input event is fired, serverName is updated
+    - **Two-way databinding** reacting to events in both ways
+
+
+
+
+ <img src="WhatAreDirectives.PNG" alt="alt text" width="600"/>
+
+    

@@ -281,8 +281,38 @@ type="text"
     - **Two-way databinding** reacting to events in both ways
 
 
-
+- Components are kinda **Directives**, **instruction** on DOM, `<selector>` in template is telling Angular to place our codes here. An **instricton**
 
  <img src="WhatAreDirectives.PNG" alt="alt text" width="600"/>
 
-    
+ - Directive whitout template `appTurnGreen`
+- Telling angular there is this directive
+
+```
+@Directive({
+    selector:'[appTurnGreen]'
+})
+```
+
+- Directive shipped with **Angular** `ngIf`
+    - ngIF is **Structural Directive**
+        - When using <p *ngIf=""`> `*` is needed, coz **changes structure** of our DOM. Structural Directive
+        - `=""` inside here coz logic which end of the day return **true** or **false**
+
+- Example using ***ngIf=**
+
+```
+
+<p *ngIf="serverCreated">Server was Created, server name is {{ serverName }}</p>
+
+```
+- Following code will create such behaviour
+- Before clicking bytton we can see
+    1. The hook which angular uses to make sure where to insert our paragraph
+    2. Our html page whiout ngIf modifications
+<img src="domBegoreNgIF.PNG" alt="alt text" width="600"/>
+ 
+
+<img src="domAfterNgIF.PNG" alt="alt text" width="600"/>
+
+- 3. After click **DOM** was manipulated by `*ngIf`  new elemtn was added, the <p> was added to DOM!!! Its not hidden or anything else its **added to DOM**, this is important to realize

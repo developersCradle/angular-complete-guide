@@ -16,6 +16,7 @@ type="text"
 
 <!-- <p>{{ allowNewServer }} </p> Same results can be achieved -->
 <!-- <p [innerText]="allowNewServer"></p>    -->
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf="serverCreated">Server was Created, server name is {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>

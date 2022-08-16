@@ -270,10 +270,12 @@ onclick="some">Add
 - `ngModel` is **Directive**
 
 ```
+
 <input 
 type="text" 
  class="form-control" 
  [(ngModel)="serverName"]>
+
 ```
 - If input event is fired, serverName is updated
     - **Two-way databinding** reacting to events in both ways

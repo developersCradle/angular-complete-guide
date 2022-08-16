@@ -15,11 +15,11 @@ Insert certificate here when completed
 
 - [x] [Section 01](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%201%20Gettings%20Started) - Getting Started
 - [ ] [Section 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics) - The Basics 
-- [ ] Section 03 - 
-- [ ] Section 04 - 
-- [ ] Section 05 - 
-- [ ] Section 06 - 
-- [ ] Section 07 - 
+- [ ] [Section 03](#) - Course Project - The Basics
+- [ ] [Section 04](#) - Debugging
+- [ ] [Section 05](#) - Components & Databinding Deep Dive
+- [ ] [Section 06](#) - Course Project - Components & Databinding
+- [ ] [Section 07](#) - Directives Deep Dive
 - [ ] Section 08 - 
 - [ ] Section 09 - 
 - [ ] Section 10 - 
@@ -42,8 +42,8 @@ Insert certificate here when completed
 - [ ] Section 27 - 
 - [ ] Section 28 - 
 - [ ] Section 29 - 
-- [ ] Section 30 - 
-- [ ] Section 31 - 
-- [ ] Section 32 - 
+- [ ] [Section 30](#) - Angular as a Platform & Closer Look at the CLI
+- [ ] [Section 31](#) - Angular Changes & New Features
+- [ ] [Section 32](#) - Course Roundup
 - [x] [Section 33](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2033%20TypeScript%20Introduction%20(for%20Angular%202%20Usage)) -  TypeScript Introduction (for Angular 2 Usage)
 - Add more when time comes

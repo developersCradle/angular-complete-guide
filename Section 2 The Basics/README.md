@@ -324,8 +324,41 @@ type="text"
 - **Enchanced if** applied with **ng-tempate** and **local reference**
 
 ```
+
 <p *ngIf="serverCreated; else noServer">Server was Created, server name is {{ serverName }}</p>
 <ng-template #noServer>
    <p> No server was created!</p>
 </ng-template>
+
 ```
+
+- Other type of Directive is **Attribute Directive**
+   - whitout `*`
+
+<img src="attributeDirectives.PNG" alt="alt text" width="700"/>
+
+- 'ngStyle'
+    - Dynamically update styles 
+    - All **'ng'** started are built in Directives shipped with Angular
+- `<p [ngStyle]>=""` we binding to property of Directive
+    - ngStyle want JS object
+    - ngStyle wants color after `=""`
+        - `<p [ngStyle]="{backgroundColor: 'red'}">`
+
+```
+<!-- html code -->
+
+<p [ngStyle]="{backgroundColor: getColor()}"> {{'server'}} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+
+<!-- ts code -->
+
+getColor()
+{
+    return this.serverStatus === 'online' ? 'green' : 'red';
+}
+```
+
+<img src="ngStyleInAction.PNG" alt="alt text" width="700"/>
+
+
+- `ngClass` dynamically add or remove css classes

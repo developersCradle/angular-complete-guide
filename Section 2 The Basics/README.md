@@ -55,7 +55,6 @@ The Basics
 export class ServerCompoment {
     
 }
-
 ```
 
 - Spesifies that we want to import this class elsewhere 
@@ -67,11 +66,9 @@ export class ServerCompoment {
         - Angular has many packages, one of which have many core features is `@angular/core`
 
 ```
-
 @Component({
   selector: 'app-server', //Should use unique selector
 })
-
 ```
 - We can pass JS object to configure angular decorator
     - Will be stored as **metadata** for this class
@@ -83,7 +80,6 @@ export class ServerCompoment {
 - We need to tell Angluar of our new component
 
 ```
-
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -104,7 +100,6 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 ```
 
 - app.module.ts is just empty .ts class
@@ -129,12 +124,10 @@ export class AppModule { }
 
 
 ```
-
 app-servers.component.html
 
 <app-server></app-server>
 <app-server></app-server>
-
 ```
 - We can also nest other components as manytimes we want 
     - now we just use `<app-servers></app-servers>` to get two app-server components
@@ -144,11 +137,11 @@ app-servers.component.html
 - Each component **needs** **template** to have defined `templateUrl: './servers.component.html'` or `template`
     - We can use these in following manner(redline should be ignore!)
 
-<img src="templateBefore.JPG" alt="alt text" width="800"/>
+<img src="templateBefore.JPG" alt="alt text" width="500"/>
 
 - Use external if much code
 
-<img src="templateAfter.JPG" alt="alt text" width="800"/>
+<img src="templateAfter.JPG" alt="alt text" width="600"/>
 
 - Using `template`, we could use both ways defining template. This could be good if not so much code
 
@@ -156,9 +149,9 @@ app-servers.component.html
 
 - We can define css for component multiline inline using  ` `` `
     - Or using  array notation multiple css files `styleUrls: ['./app.component.css', 'test.css']`
-- Using file vs inline depends on how much code like in previous case
+- Using file vs inline depends on how much code there is, like in previous case
 
-<img src="waysSelectingComponent.JPG" alt="alt text" width="800"/>
+<img src="waysSelectingComponent.JPG" alt="alt text" width="500"/>
 
 - Different ways making selector
     - .class selector
@@ -195,10 +188,8 @@ app-servers.component.html
 - Same results can be achieved using **Property Biding** or **String Interpolation**
 
 ```
-
 <p>{{ allowNewServer }} </p><!--  Same results can be achieved -->
 <p [innerText]="allowNewServer"></p>  <!--  Same results can be achieved -->
-
 ```
 
 - **innerText** of element is text between opening and closing tag 
@@ -206,9 +197,7 @@ app-servers.component.html
     - DONT MIX THESE
 
 ```
-
 <p [innerText]="{{allowNewServer}}"></p>
-
 ``` 
 - There is no **String Interpolation** inside  **Property Biding**  
 
@@ -220,11 +209,9 @@ app-servers.component.html
     - We could use **HTML Event Biding** `onclick="some"`
 
 ```
-
 <button class="btn btn-primary"
 [disabled]="!allowNewServer"
 onclick="some">Add
-
 ```
 
 - But, we are going to use **Angulars** Event Binding
@@ -243,13 +230,11 @@ onclick="some">Add
 - Handling/Catching event in ts code
 
 ```
-
   onUpdateServerName(event : Event)
   {
     console.log(event);
     this.serverName = (<HTMLInputElement>event.target).value;
   }
-
  ```
 
 - Event logged insde chrome console
@@ -270,13 +255,12 @@ onclick="some">Add
 - `ngModel` is **Directive**
 
 ```
-
 <input 
 type="text" 
  class="form-control" 
  [(ngModel)="serverName"]>
-
 ```
+
 - If input event is fired, serverName is updated
     - **Two-way databinding** reacting to events in both ways
 
@@ -285,8 +269,8 @@ type="text"
 
  <img src="WhatAreDirectives.PNG" alt="alt text" width="600"/>
 
- - Directive whitout template `appTurnGreen`
-- Telling angular there is this directive
+- Directive whitout template `appTurnGreen`
+- Telling Angular there is this directive
 
 ```
 @Directive({
@@ -294,25 +278,54 @@ type="text"
 })
 ```
 
-- Directive shipped with **Angular** `ngIf`
-    - ngIF is **Structural Directive**
-        - When using <p *ngIf=""`> `*` is needed, coz **changes structure** of our DOM. Structural Directive
+- Directives are usually added using attribute selector, like in picture below
+
+<img src="attributeSelector.PNG" alt="alt text" width="200"/>
+
+- Directives shipped with **Angular** like example `ngIf`
+    - `ngIf` is used for **conditional** logic
+    - `ngIf` is **Structural Directive**
+        - When using <p *ngIf=""> `*` is needed, coz **changes structure** of our DOM, hence **Structural Directive**
         - `=""` inside here coz logic which end of the day return **true** or **false**
 
-- Example using ***ngIf=**
+- This will be always be shown
 
 ```
+<p>Server was Created, server name is {{ serverName }}</p>
+```
 
+- Same, but using ***ngIf=**, will show based on logic between `=""`
+
+```
 <p *ngIf="serverCreated">Server was Created, server name is {{ serverName }}</p>
-
 ```
+
 - Following code will create such behaviour
 - Before clicking bytton we can see
     1. The hook which angular uses to make sure where to insert our paragraph
-    2. Our html page whiout ngIf modifications
-<img src="domBegoreNgIF.PNG" alt="alt text" width="600"/>
+    2. Our html page whiout `ngIf` modifications
+<img src="domBegoreNgIF.PNG" alt="alt text" width="700"/>
  
+<img src="domAfterNgIF.PNG" alt="alt text" width="700"/>
 
-<img src="domAfterNgIF.PNG" alt="alt text" width="600"/>
+3. After click **DOM** was manipulated by `*ngIf`  new element was added, the `<p>` was added to DOM!!! Its not hidden or anything else its **added to DOM**, this is important to realize.
 
-- 3. After click **DOM** was manipulated by `*ngIf`  new elemtn was added, the <p> was added to DOM!!! Its not hidden or anything else its **added to DOM**, this is important to realize
+
+
+- `#` local reference syntax, using this `#noServer`
+
+- `</ng-template> <ng-template>` Component directive comes with Angular
+    - Used to mark places in the DOM.
+- And then same with local reference syntax
+- `</ng-template #noServer> <ng-template>`
+
+- **Enchanced if** `ngIF` using this would be `<p *ngIf="serverCreated; else noServer">`
+
+- **Enchanced if** applied with **ng-tempate** and **local reference**
+
+```
+<p *ngIf="serverCreated; else noServer">Server was Created, server name is {{ serverName }}</p>
+<ng-template #noServer>
+   <p> No server was created!</p>
+</ng-template>
+```

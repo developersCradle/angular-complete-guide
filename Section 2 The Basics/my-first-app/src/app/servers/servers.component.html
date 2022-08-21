@@ -23,5 +23,4 @@ type="text"
 </ng-template> -->
 
 <p *ngIf="serverCreated">Server was Created, server name is {{ serverName }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>

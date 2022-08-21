@@ -362,3 +362,35 @@ getColor()
 
 
 - `ngClass` dynamically add or remove css classes
+    - Needs to be using with property binding
+    - Accepts key-valye pairs
+    - **Key**, class to be attached
+        - **Value**, should be this class attached or not
+- Using `ngClass`
+
+```
+<p 
+[ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+```
+
+<img src="ngClassInAction.PNG" alt="alt text" width="600"/>
+
+- Online css .class was attached if server status was online
+
+- `ngFor` could be used it such case where there is static ammount selector elements
+    - Structural directive
+```
+<app-server></app-server>
+<app-server></app-server>
+```
+
+```
+<!-- In ts -->
+servers = ['Testserver', 'Testserver 2'];
+
+<!-- In html -->
+<app-server *ngFor="let server of servers"></app-server>
+```
+- `servers` which we defined in **Ts** file
+- Will loop trought `servers` induvidual elements and assings it to `server` to be used in this template. Example between `><` marks

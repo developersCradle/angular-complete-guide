@@ -413,6 +413,7 @@ servers = ['Testserver', 'Testserver 2'];
 
 - Assingments from 1-3 can be run after running `npm install --legacy-peer-deps`
 
+
 - [x] [Assignment 01](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_1/basics-components) - Practicing Components
 - [x] [Assignment 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_2/basics-assignment-2-start) - Practicing Databinding
 - [x] [Assignment 03](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_3/basics-assignment-3-start) - Practicing Directives

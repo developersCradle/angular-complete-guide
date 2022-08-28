@@ -394,3 +394,26 @@ servers = ['Testserver', 'Testserver 2'];
 ```
 - `servers` which we defined in **Ts** file
 - Will loop trought `servers` induvidual elements and assings it to `server` to be used in this template. Example between `><` marks
+
+<img src="index.PNG"  width="600"/>
+
+- Inside `*ngFor` you can extract extra information using `;` in the end  
+    - Allows access index of current location
+    `index` is reserved keyword, allows acces to current index in for
+    - This can be helpfull if object which you are iterating is not easily countable
+
+```
+<div *ngFor="let logItem of log; let i = index"
+[ngStyle] = "{backgroundColor : i >= 4 ? 'blue' : 'transparent'}"
+[ngClass] = "{'white-text' : i >= 4}"
+>{{ logItem }}</div>
+```
+
+## Assigments
+
+- Assingments from 1-3 can be run after running `npm install --legacy-peer-deps`
+
+- [x] [Assignment 01](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_1/basics-components) - Practicing Components
+- [x] [Assignment 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_2/basics-assignment-2-start) - Practicing Databinding
+- [x] [Assignment 03](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics/Exercise_3/basics-assignment-3-start) - Practicing Directives
+

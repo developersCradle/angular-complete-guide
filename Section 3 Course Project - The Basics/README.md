@@ -13,3 +13,10 @@ We will build recipe book and shoping list app
 - Root will hold application
 - Header, will navigate between these two applications
 - **Model** Should be very clear, its good to know what information your app will be changing
+
+<img src="AppErrorMessage.PNG" alt="alt text" width="600"/>
+
+- Common error, `app-header is not a known element`
+    - Forgot add to app.module our new component
+
+    jäin 4:50

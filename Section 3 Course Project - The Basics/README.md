@@ -32,3 +32,10 @@ We will build recipe book and shoping list app
 
 - Its good habit to structure folder by feature as show in upper picture
 
+`<div class="col-md-12">`
+
+- The Bootstrap grid system has four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
+
+<img src="navBar.PNG" alt="alt text" width="600"/>
+
+- Bootstrap navbar looks like

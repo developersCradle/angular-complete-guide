@@ -27,7 +27,7 @@ Insert certificate here when completed
 - [ ] Section 12 - 
 - [ ] Section 13 - 
 - [ ] Section 14 - 
-- [ ] [Section 15](#) - Handling Forms in Angular Apps
+- [ ] [Section 15](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2015%20Handling%20Forms%20in%20Angular%20Apps) - Handling Forms in Angular Apps
 - [ ] Section 16 - 
 - [ ] Section 17 - 
 - [ ] Section 18 - 

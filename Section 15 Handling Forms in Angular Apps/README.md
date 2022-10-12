@@ -48,4 +48,35 @@
       - Then we need to give it HTML attribute, example `name="username"`
   <img src="inputRegisterationToJsObjectRepresentationOfThisForm.JPG" alt="alt text" width="500">
 
-  - `<select>` is also input and and its making dropdown list
+- `<select>` is also input and and its making dropdown list
+
+  ```
+ 
+  <form>
+  <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+ 
+  ```
+  - Default behaviour button which have type="submit" inside **form**
+    - Default behaviour of HTML is fired
+      - Js submit event is fired  
+
+- Angular can take advantage of this
+  - We could use `(ngSubmit)` directive
+    - Will be fired, when submit is occured inside this form
+    <img src="ngSubmit.PNG" alt="alt text" width="400"/>
+    - `OnSubmit()` is called when submit is recognized in form
+    - To see **Form Object**
+    - To access Form object created by Angular inside onSubmit()
+    `<form (ngSubmit)="onSubmit(f)" #f="ngForm">`
+    - In ts file
+    ```
+      onSubmit(form : NgForm)
+      {
+        console.log(form);
+      }
+    ```
+
+<img src="caputerdNgFromWithValues.PNG" alt="alt text" width="800">
+
+- Capturing NgForm onbject with spesifed names on HTML

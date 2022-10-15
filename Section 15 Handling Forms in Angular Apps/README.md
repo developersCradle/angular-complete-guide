@@ -46,6 +46,7 @@
     - Need to register controls manually
     - To register manually in  **Template-Driven** approach, just add `ngModel` to input you want to controll
       - Then we need to give it HTML attribute, example `name="username"`
+
   <img src="inputRegisterationToJsObjectRepresentationOfThisForm.JPG" alt="alt text" width="500">
 
 - `<select>` is also input and and its making dropdown list
@@ -64,10 +65,12 @@
 - Angular can take advantage of this
   - We could use `(ngSubmit)` directive
     - Will be fired, when submit is occured inside this form
+
     <img src="ngSubmit.PNG" alt="alt text" width="400"/>
+    
     - `OnSubmit()` is called when submit is recognized in form
     - To see **Form Object**
-    - To access Form object created by Angular inside onSubmit()
+    - To access Form object created by **Angular** inside onSubmit()
     `<form (ngSubmit)="onSubmit(f)" #f="ngForm">`
     - In ts file
     ```
@@ -79,4 +82,35 @@
 
 <img src="caputerdNgFromWithValues.PNG" alt="alt text" width="800">
 
-- Capturing NgForm onbject with spesifed names on HTML
+- Capturing NgForm object with specified names on HTML
+
+<img src="formHandlingByAngular.PNG" alt="alt text" width="200">
+
+- Form Handling by Angular is realy powerfull, as you can see there is alot of propertyes how Angular manages/controlls *NgForm*
+
+- Some examples, `Dirty` if we changed something inside our form 
+- `Disabled` if they are disabled
+  - Usercase **Disable** submit button if form is invalid
+- `Valied`, if we add  validators to form
+- `Touched` if we clicked inside speific field
+
+<img src="anotherWayToPassAngularsFormObject.PNG" alt="alt text" width="500">
+
+- Another way to pass form Object is to use `@ViewChild`, works same as previously
+  - This is usefull, when  need to access form before submitting
+
+- Input should be valitaded in fortend and in backend
+
+- To add validations in Template-driven approach 
+
+```        
+<input
+            type="email"
+            id="email" 
+            class="form-control"
+            ngModel
+            name="email"
+            required
+            email
+  >
+```        

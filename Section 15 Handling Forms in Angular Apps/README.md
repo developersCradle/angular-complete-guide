@@ -113,4 +113,18 @@
             required
             email
   >
-```        
+```  
+
+- We need to add validators to **template**
+  - `required` HTML attrivbute, but Angular uses this as such
+  - `email` dirrective, its form Angular
+    - Check valid email address
+- Valid is tracked in **Form** level also in **Controll** level
+
+<img src="angularCssClasses.PNG" alt="alt text" width="500">
+
+- Angular usess classes to dynamically to give information about state of the form object
+
+- [Validators](https://angular.io/api/forms/Validators)
+  - More validators for Template-driven approach, search "validator" [MoreValidators](https://angular.io/api?type=)
+> Additionally, you might also want to enable HTML5 validation (by default, Angular disables it). You can do so by adding the ngNativeValidate  to a control in your template

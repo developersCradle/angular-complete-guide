@@ -91,11 +91,12 @@
 - Some examples, `Dirty` if we changed something inside our form 
 - `Disabled` if they are disabled
   - Usercase **Disable** submit button if form is invalid
-- `Valied`, if we add  validators to form
+- `Valid`, if we add  validators to form
 - `Touched` if we clicked inside speific field
 
 <img src="anotherWayToPassAngularsFormObject.PNG" alt="alt text" width="500">
 
+- `f` points to **form object** in our html template. **TODO** palaa tähän kun tutustut `@viewChild`
 - Another way to pass form Object is to use `@ViewChild`, works same as previously
   - This is usefull, when  need to access form before submitting
 
@@ -121,10 +122,34 @@
     - Check valid email address
 - Valid is tracked in **Form** level also in **Controll** level
 
-<img src="angularCssClasses.PNG" alt="alt text" width="500">
+<img src="angularCssClasses.PNG" alt="alt text" width="600">
 
 - Angular usess classes to dynamically to give information about state of the form object
 
 - [Validators](https://angular.io/api/forms/Validators)
   - More validators for Template-driven approach, search "validator" [MoreValidators](https://angular.io/api?type=)
+
 > Additionally, you might also want to enable HTML5 validation (by default, Angular disables it). You can do so by adding the ngNativeValidate  to a control in your template
+
+- Taking advantage of form  states handled by angular, disable button if form is invalid
+
+```
+     <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!f.valid"
+        >Submit</button>
+```
+
+<img src="invalidControls.PNG" alt="alt text" width="700">
+
+- To add red marks around invalid controlls, we could use css as such 
+- Better usage to only if its been touched
+
+```
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+````

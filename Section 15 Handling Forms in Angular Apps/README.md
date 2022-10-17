@@ -153,3 +153,21 @@ input.ng-invalid.ng-touched {
 }
 
 ````
+
+- Other way adding error message to inform invalid state
+- **TODO heikki** selvitä miten todo liittyy
+
+```
+<input
+            type="email"
+            id="email" 
+            class="form-control"
+            ngModel
+            name="email"
+            required
+            email
+            #email="ngModel"> 
+            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+```
+
+- Default values 195. TD: Set Default Values with ngModel Property Binding

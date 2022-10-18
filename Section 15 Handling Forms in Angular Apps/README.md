@@ -115,7 +115,7 @@
             email
   >
 ```  
-
+- Using `ngModel` we can get access to controll
 - We need to add validators to **template**
   - `required` HTML attrivbute, but Angular uses this as such
   - `email` dirrective, its form Angular
@@ -162,12 +162,43 @@ input.ng-invalid.ng-touched {
             type="email"
             id="email" 
             class="form-control"
-            ngModel
+            [ngModel]="defaultQuestion"
             name="email"
             required
             email
             #email="ngModel"> 
             <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
 ```
+- Using `[ngModel]="defaultQuestion"` to make default value
 
-- Default values 195. TD: Set Default Values with ngModel Property Binding
+```
+
+  <select
+          id="secret"
+          class="form-control"
+          [ngModel]="defaultQuestion"
+          name="secret">q
+            <option value="pet">Your first Pet?</option>
+            <option value="teacher">Your first teacher?</option>
+          </select>
+
+```
+
+- Two way binding with ngModel
+
+```
+       <div class="form-group">
+          <textarea 
+          name="questionAnswer"
+          rows="3"
+          [(ngModel)]="answer"
+          class="form-control"
+          ></textarea>
+        </div>
+        <p>Your Reply: {{ answer }}</p>
+```
+
+- All three forms
+  - No binding, tell Angular input is controll
+  - One way binding give control default value
+  - Two way binding, instanly showing value what is being manipulated 

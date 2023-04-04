@@ -39,3 +39,10 @@ We will build recipe book and shoping list app
 <img src="navBar.PNG" alt="alt text" width="700"/>
 
 - Bootstrap navbar looks like
+
+<img src="recipeModel.JPG" alt="alt text" width="700"/>
+
+- 1. Since **Recipe** is common thought app we should make modal out of this class.
+    - It creates layout how this object should work
+
+    todo jäin 4:00

@@ -45,4 +45,29 @@ We will build recipe book and shoping list app
 - 1. Since **Recipe** is common thought app we should make modal out of this class.
     - It creates layout how this object should work
 
-    todo jäin 4:00
+- Bootstrap **clearfix**(https://getbootstrap.com/docs/4.0/utilities/clearfix/)
+    - `<a href="#" class="list-group-item clearfix"></a>`
+`
+
+- Using `*ngFor` in our recipes application
+
+```
+<a href="#" class="list-group-item clearfix" *ngfor="let recipe of recipes">
+         <div class="pull-left">
+            <h4 class="list-group-item-heading">Recipe Name</h4>
+            <p class="list-group-item-text">Description</p>
+         </div>
+         <span class="pull-right">
+            <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+         </span>
+      </a>
+```
+
+<img src="usingFields.JPG" alt="alt text" width="500"/>
+
+- We can use class fields as such from the class `<h4 class="list-group-item-heading">{{ recipe.name }}</h4>`
+
+<img src="twoWaysToAddImage.JPG" alt="alt text" width="500"/>
+
+- 1. We can use string interpretation to input our path to image
+- 2. Or use property binding

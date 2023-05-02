@@ -1,7 +1,7 @@
 # Section 3  Course Project - The Basics
 
-We will build recipe book and shoping list app
-    - Manange, View, modify
+We will build recipe book and shopping list app
+    - Manage, View, modify
 
 # What I Learned
 
@@ -71,3 +71,27 @@ We will build recipe book and shoping list app
 
 1. We can use string interpretation to input our path to image
 2. Or use property binding
+
+- Communicating between components is coming later, one important part of Angular application 
+
+- Shopping List needs array of incredients ` <a  style="cursor: pointer" class="list-group-item"></a>`
+
+```
+export class Ingredient {
+    public name : string;
+    public amount: number;
+     
+    constructor (name : string, amount : number )
+    {
+        this.name = name;
+        this.amount = amount;
+    }
+}
+```
+- We can shorter this using, using **accessor**. Example below
+
+```
+export class Ingredient {
+    constructor (public name : string, public amount : number ) {}
+}
+```

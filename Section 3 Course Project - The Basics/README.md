@@ -8,7 +8,7 @@ We will build recipe book and shoping list app
 
 <img src="OurAppPlan.PNG" alt="alt text" width="600"/>
 
-- Little plannig below
+- Little planning below
 - Our App will have Shopping List and Recipe Book applications
 - Root will hold application
 - Header, will navigate between these two applications
@@ -47,12 +47,12 @@ We will build recipe book and shoping list app
 
 - Bootstrap **clearfix**(https://getbootstrap.com/docs/4.0/utilities/clearfix/)
     - `<a href="#" class="list-group-item clearfix"></a>`
-`
+
 
 - Using `*ngFor` in our recipes application
 
 ```
-<a href="#" class="list-group-item clearfix" *ngfor="let recipe of recipes">
+<a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
          <div class="pull-left">
             <h4 class="list-group-item-heading">Recipe Name</h4>
             <p class="list-group-item-text">Description</p>
@@ -67,7 +67,7 @@ We will build recipe book and shoping list app
 
 - We can use class fields as such from the class `<h4 class="list-group-item-heading">{{ recipe.name }}</h4>`
 
-<img src="twoWaysToAddImage.JPG" alt="alt text" width="500"/>
+<img src="twoWaysToAddImage.JPG" alt="alt text" width="400"/>
 
-- 1. We can use string interpretation to input our path to image
-- 2. Or use property binding
+1. We can use string interpretation to input our path to image
+2. Or use property binding

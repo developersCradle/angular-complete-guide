@@ -74,7 +74,7 @@ We will build recipe book and shopping list app
 
 - Communicating between components is coming later, one important part of Angular application 
 
-- Shopping List needs array of incredients ` <a  style="cursor: pointer" class="list-group-item"></a>`
+- Shopping List needs array of ingredients ` <a  style="cursor: pointer" class="list-group-item"></a>`
 
 ```
 export class Ingredient {

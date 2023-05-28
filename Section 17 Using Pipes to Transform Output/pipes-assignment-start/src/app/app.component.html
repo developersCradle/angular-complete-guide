@@ -5,20 +5,21 @@
       <br>
       <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
       <br><br>
-      <h2>App Status: {{ appStatus | async }} </h2>
+      <h2>App Status: {{ appStatus | async}}</h2>
       <hr>
       <ul class="list-group">
         <li
           class="list-group-item"
-          *ngFor="let server of servers | filter : filteredStatus : 'status'"
+          *ngFor="let server of servers | filter : filteredStatus : 'status' | sort:'name'"
           [ngClass]="getStatusClasses(server)">
           <span
             class="badge">
             {{ server.status }}
           </span>
-          <strong>{{ server.name | shorten:5 }}</strong> | 
-          {{ server.instanceType | uppercase }} | 
-          {{ server.started  | date :'fullDate' | uppercase }}
+          <!-- filter:filteredStatus |  | sort:'name'-->
+          <strong>{{ server.name }}</strong> |
+          {{ server.instanceType | reverse | uppercase }} |
+          {{ server.started | date:'fullDate' | uppercase }}
         </li>
       </ul>
     </div>

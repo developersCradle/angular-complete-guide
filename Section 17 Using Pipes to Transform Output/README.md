@@ -89,7 +89,7 @@ export class ShortPipe implements PipeTransform {
 
 - Passing argument after **:**
 
-- Generating pipe in cli `ng generate pipe filter`, generates pipe for name of **filter**
+- Generating pipe in CLI `ng generate pipe filter`, generates pipe for name of **filter**
 
 - Pipe can return any data, `string`, `[]` not just true of false 
 
@@ -131,3 +131,55 @@ export class FilterPipe implements PipeTransform {
 
 
 <img src="filteringUsingOurCustoFilterPipe.JPG" alt="alt text" width="600"/>
+
+- Angular does not re-run pipe whenever data is changed
+    - Changing input of the pipe, will change re-calculation
+
+- It would be realy bad if angular would need re-run pipe every time data somewhere would be updated -> bad for performance 
+    - There is no filtering **pipes** inside Angular
+
+
+- We can **force** update when ever date is update using *pure* decorator
+
+```
+@Pipe({
+  name: 'filter',
+  pure: false
+})
+```
+- [Promise Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)
+
+- Handling async data, we can use pipe **async**, use after that wants to be evaluated
+    - Build in async pipe
+```
+{{ appStatus | async }} 
+```
+- Such data would be updated to front-end after data is evaluated, example after promise is returned
+
+## Assignments
+
+- Assignment from 1 can be run after running `npm install --legacy-peer-deps`
+
+- [x] [Assignment 8: Practicing Pipes](#) - Practicing Components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

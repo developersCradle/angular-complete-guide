@@ -2,7 +2,7 @@
 
 ![Angular](angular.png)
 
-My OS will be windows 10 so some notes are based on this operation system. This contains exercise files and my own notes alongside with them.<br/>
+My OS will be Windows 10, so some notes are based on this operating system. This contains exercise files and my own notes alongside with them.<br/>
 
 
 All course material from Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller
@@ -17,8 +17,8 @@ Insert certificate here when completed
 - [x] [Section 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics) - The Basics 
 - [x] [Section 03](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%203%20Course%20Project%20-%20The%20Basics) - Course Project - The Basics
 - [x] [Section 04](#) - Debugging
-- [ ] [Section 05](#) - Components & Databinding Deep Dive
-- [ ] [Section 06](#) - Course Project - Components & Databinding
+- [ ] [Section 05](#) - Components & Data binding Deep Dive
+- [ ] [Section 06](#) - Course Project - Components & Data binding
 - [ ] [Section 07](#) - Directives Deep Dive
 - [ ] Section 08 - 
 - [ ] Section 09 - 
@@ -29,7 +29,7 @@ Insert certificate here when completed
 - [ ] Section 14 - 
 - [ ] [Section 15](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2015%20Handling%20Forms%20in%20Angular%20Apps) - Handling Forms in Angular Apps
 - [ ] Section 16 - 
-- [ ] [Section 17](#) - Section 17: Using Pipes to Transform Output 
+- [x] [Section 17](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2017%20Using%20Pipes%20to%20Transform%20Output) - Section 17: Using Pipes to Transform Output 
 - [ ] Section 18 - 
 - [ ] Section 19 - 
 - [ ] Section 20 - 

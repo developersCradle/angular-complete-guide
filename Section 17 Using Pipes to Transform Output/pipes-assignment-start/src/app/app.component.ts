@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Loading sould done after couble seconds 
   appStatus = new Promise((resolve, reject) => {
-    setTimeout(() =>{
+    setTimeout(() => {
       resolve('stable');
     }, 2000);
   });
-  //Represnting servers
   servers = [
     {
       instanceType: 'medium',
-      name: 'Production Server',
+      name: 'Production',
       status: 'stable',
       started: new Date(15, 1, 2017)
     },
@@ -40,15 +38,13 @@ export class AppComponent {
     }
   ];
   filteredStatus = '';
-  //helper class
-  getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date }) {
+  getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'stable',
       'list-group-item-warning': server.status === 'offline',
       'list-group-item-danger': server.status === 'critical'
     };
   }
-
   onAddServer() {
     this.servers.push({
       instanceType: 'small',

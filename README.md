@@ -16,7 +16,7 @@ Insert certificate here when completed
 - [x] [Section 01](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%201%20Gettings%20Started) - Getting Started
 - [x] [Section 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics) - The Basics 
 - [x] [Section 03](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%203%20Course%20Project%20-%20The%20Basics) - Course Project - The Basics
-- [x] [Section 04](#) - Debugging
+- [x] [Section 04](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%204%20Debugging) - Debugging
 - [ ] [Section 05](#) - Components & Data binding Deep Dive
 - [ ] [Section 06](#) - Course Project - Components & Data binding
 - [ ] [Section 07](#) - Directives Deep Dive
@@ -30,7 +30,7 @@ Insert certificate here when completed
 - [ ] [Section 15](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2015%20Handling%20Forms%20in%20Angular%20Apps) - Handling Forms in Angular Apps
 - [ ] Section 16 - 
 - [x] [Section 17](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2017%20Using%20Pipes%20to%20Transform%20Output) - Section 17: Using Pipes to Transform Output 
-- [ ] Section 18 - 
+- [ ] [Section 18](#) - Section 18: Making Http Requests 
 - [ ] Section 19 - 
 - [ ] Section 20 - 
 - [ ] Section 21 - 

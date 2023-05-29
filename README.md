@@ -17,7 +17,7 @@ Insert certificate here when completed
 - [x] [Section 02](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%202%20The%20Basics) - The Basics 
 - [x] [Section 03](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%203%20Course%20Project%20-%20The%20Basics) - Course Project - The Basics
 - [x] [Section 04](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%204%20Debugging) - Debugging
-- [ ] [Section 05](#) - Components & Data binding Deep Dive
+- [ ] [Section 05](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%205%20Components%20%26%20Databinding%20Deep%20Dive) - Components & Data binding Deep Dive
 - [ ] [Section 06](#) - Course Project - Components & Data binding
 - [ ] [Section 07](#) - Directives Deep Dive
 - [ ] Section 08 - 

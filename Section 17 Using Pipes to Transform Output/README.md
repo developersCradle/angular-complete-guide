@@ -160,7 +160,7 @@ export class FilterPipe implements PipeTransform {
 
 - Assignment from 1 can be run after running `npm install --legacy-peer-deps`
 
-- [x] [Assignment 8: Practicing Pipes](#) - Practicing Components
+- [x] [Assignment 8: Practicing Pipes](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2017%20Using%20Pipes%20to%20Transform%20Output/pipes-assignment-start) - Practicing Components
 
 
 

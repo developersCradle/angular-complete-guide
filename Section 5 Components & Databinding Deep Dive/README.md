@@ -4,7 +4,7 @@ Components & Data binding Deep Dive
 
 # What I Learned
 
-- Bundling angular app in smaller compoments can be benificial
+- Bundling angular app in smaller components can be beneficial
 
 - [cli commands](https://angular.io/cli/generate)
  
@@ -128,10 +128,18 @@ Components & Data binding Deep Dive
   - We can pass the reference only in the **template** not in **ts file**
 
   - Example using local reference 
+
   ```
   <input 
       type="text" 
       class="form-control" 
       #serverNameInput>
-
   ```
+
+- We can access before call method using **ViewChild** `@ViewChild('serverContentInput'`
+  - We can also pass type of element here
+  - `@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;` Passing type as ElementRef. ElementRef is Angular type
+
+- Bad way manipulating DOM `// this.serverContentInput.nativeElement.value = 'Something'; This is bad way manipulating DOM element`
+  - Should use String Interpolation or Property Binding if you want to show something in the DOM
+  

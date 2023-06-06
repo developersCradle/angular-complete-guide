@@ -25,7 +25,7 @@ Insert certificate here when completed
 - [ ] Section 10 - 
 - [ ] Section 11 - 
 - [ ] Section 12 - 
-- [ ] Section 13 - 
+- [ ] [Section 13](#) - Section 13: Understanding Observables
 - [ ] Section 14 - 
 - [ ] [Section 15](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2015%20Handling%20Forms%20in%20Angular%20Apps) - Handling Forms in Angular Apps
 - [ ] Section 16 - 
@@ -47,3 +47,5 @@ Insert certificate here when completed
 - [ ] [Section 32](#) - Course Roundup
 - [x] [Section 33](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2033%20TypeScript%20Introduction%20(for%20Angular%202%20Usage)) -  TypeScript Introduction (for Angular 2 Usage)
 - Add more when time comes
+
+- todo fix the forms chapter viewChild thing

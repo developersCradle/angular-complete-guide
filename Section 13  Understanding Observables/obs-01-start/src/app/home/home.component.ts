@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
 import { Observable } from 'rxjs-compat';
 import { count } from 'rxjs-compat/operator/count';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -43,12 +44,24 @@ export class HomeComponent implements OnInit, OnDestroy {
       }, 1000)
     });
 
+// customIntervalObservable.pipe(map( (data : number) => { //Data is the emmited data which is coming from observable
+//   return 'Round: ' + ( data + 1);
+// }));
+
+
     //Subscribing to our custom observable. Give function which accpets data what we are emmitting
-    this.firstObsSubscription = customIntervalObservable.subscribe((data) =>{
+    this.firstObsSubscription = customIntervalObservable.pipe(filter((data : number) => {
+      return data > 0;
+    }), map( (data : number) => { //Data is the emmited data which is coming from observable
+      return 'Round: ' + ( data + 1);
+    })).subscribe((data) =>{
       console.log(data);
-    }, error => { //handling error
+    }, error => { //Erro handler
       console.log(error);
       alert(error.message);
-    });
+    }, () => { // Completing handler, we could put cleanup process here
+      console.log("Completed!")
+    }
+    );
   }
 }

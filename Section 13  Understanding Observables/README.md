@@ -27,6 +27,8 @@
 - `npm install --save rxjs@6`
 - `npm install --save rxjs@6`
 
+- **Handling** observable data which is emmitted
+
 ```
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
@@ -132,6 +134,9 @@
 <img src="ThrowingErrorInObserver.JPG" alt="alt text" width="700"/>
 
 - **Handling error**, after first function comes
+  - Throwing error lets observable **die**, completing error is something different
+
+- **Error handler** below  
 
 ```
     //Subscribing to our custom observable. Give function which accpets data what we are emmitting
@@ -139,20 +144,119 @@
       console.log(data);
     }, error => { //handling error
       console.log(error);
-      alert(error.message);
+      alert(error.message); //Showing error to user
     });
 ```
 
 - **Completing** observable
+  - We could use this in **HTTP request**, it will complete
+
 ``` 
 if (count == 2) {
-  observer.complete();
+  observer.complete(); //Observale comes to hold, its done
 }
 ```
 
-175. Errors & Completion
-7min
+- **Completing handler**
 
-add handlers
+```
+ //Subscribing to our custom observable. Give function which accpets data what we are emmitting
+    this.firstObsSubscription = customIntervalObservable.subscribe((data) =>{
+      console.log(data);
+    }, error => { //Erro handler
+      console.log(error);
+      alert(error.message);
+    }, () => { // Completing handler, we could put cleanup process here
+      console.log("Completed!")
+    }
+    );
+  }
+```
+- Complete will **not** be called if observable is cancelled by error
 
-- Todo structure this and check typos
+- You **rarely build** your own observables. Usually you build in observables types which come with angular
+
+<img src="Operators.JPG" alt="alt text" width="700"/>
+
+- 1. We could modify our data from Observable in subcription function
+- 2. Using operators is more **elegant** way of handing this
+
+- **Pipes** and **operators** are from `RxJS Operators`
+
+- Every observable has `.pipe()`, example `customIntervalObservable.pipe();`
+  - If you have more operators just add to **pipe()**
+- We modify data coming out of observable with `pipe()` and `map()`
+
+```
+ customIntervalObservable.pipe(map( (data : number) => { //Data is the emmited data which is coming from observable
+   return 'Round: ' + ( data + 1);
+ }));
+```
+
+
+- Working with operator
+
+```
+ //Subscribing to our custom observable. Give function which accpets data what we are emmitting
+    this.firstObsSubscription = customIntervalObservable.pipe(map( (data : number) => { //Data is the emmited data which is coming from observable
+      return 'Round: ' + ( data + 1);
+    })).subscribe((data) =>{
+      console.log(data);
+    }, error => { //Erro handler
+      console.log(error);
+      alert(error.message);
+    }, () => { // Completing handler, we could put cleanup process here
+      console.log("Completed!")
+    }
+    );
+  }
+  ```
+
+  - Subject comes handy when we want to do something, in this case show something in different component
+
+  <img src="activatedSubjects.JPG" alt="alt text" width="700"/>
+
+  - Old way is to use `emmiter` and `*ngIf`
+
+  - With **subject**, you need call `.next()` like this `this.userService.activedEmmitter.next(true);`
+
+  - Subject is **special** type of **observable**
+
+  <img src="subject.JPG" alt="alt text" width="700"/>
+
+  - 1. Observable is rather passive, wraps around callback, event...
+  
+  - 2. Subject is more **Active**, we can call `next()` from outside, with observables call was from **inside**
+    - `observer.next(count);` can be called from outside
+  - Example of Observable where calling `.next()` from inside
+
+  ```
+    //Real Custom Observable
+
+    let customIntervalObservable = Observable.create((observer) => 
+    {
+      let count = 0;
+      setInterval(() => {
+        if (count == 2) {
+          observer.complete();
+        }
+        // observer.error();
+        // observer.complete();
+        observer.next(count);
+        if (count > 3) {
+          observer.error(new Error("Count is greater 3!"));
+        }
+        count++;
+      }, 1000)
+    });
+
+    ```
+ - **Subject** behind scene is bit more efficient than **observable**
+
+
+- Subject is good to be used if you **communication** between components is trought **services** 
+
+- Todo kehitä syvempää tietämystä kumpaa käytää
+  - `@Output` vai (Observable, Subject)
+
+- Todo check advanced resources

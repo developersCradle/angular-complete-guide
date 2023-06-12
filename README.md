@@ -25,8 +25,8 @@ Insert certificate here when completed
 - [ ] Section 10 - 
 - [ ] Section 11 - 
 - [ ] Section 12 - 
-- [ ] [Section 13](#) - Section 13: Understanding Observables
-- [ ] Section 14 - 
+- [x] [Section 13](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2013%20%20Understanding%20Observables) - Section 13: Understanding Observables
+- [ ] [Section 14](#) - Section 14: Course Project - Observables
 - [ ] [Section 15](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2015%20Handling%20Forms%20in%20Angular%20Apps) - Handling Forms in Angular Apps
 - [ ] Section 16 - 
 - [x] [Section 17](https://github.com/developersCradle/angular-complete-guide/tree/main/Section%2017%20Using%20Pipes%20to%20Transform%20Output) - Section 17: Using Pipes to Transform Output 

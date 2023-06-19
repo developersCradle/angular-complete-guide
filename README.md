@@ -49,3 +49,7 @@ Insert certificate here when completed
 - Add more when time comes
 
 - todo fix the forms chapter viewChild thing
+
+## Summary
+
+- [ ] Lastly thought Angular documents as refreshment 

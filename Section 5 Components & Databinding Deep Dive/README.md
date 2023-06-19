@@ -143,3 +143,75 @@ Components & Data binding Deep Dive
 - Bad way manipulating DOM `// this.serverContentInput.nativeElement.value = 'Something'; This is bad way manipulating DOM element`
   - Should use String Interpolation or Property Binding if you want to show something in the DOM
   
+  - `<app-server-element></app-server-element>` inside angular component everything is ignored, until special key hook is placed **directive** element like selector `<ng-content>`
+
+<img src="doesNotWork.JPG" alt="alt text" width="900"/>
+
+- As you can see styles are not applied, **everything placed between opening and closing tags of the component is lost**
+
+- 1. This content is placed where the `<ng-content>` hook was defined  
+
+<img src="hookInAction.JPG" alt="alt text" width="800"/>
+
+- Not it will be projected into the **hook place**
+
+- `ngOnInit()` is lifecycle hook, there is many lifecycle hooks in Angular
+
+- When new component is created, there will be different lifecycle hooks, these phases are
+
+<img src="lifeCycleHooks.JPG" alt="alt text" width="800"/>
+
+- `ngOnChanges()` will be called many times
+  - Will be called before `ngOnInit()` 
+  - Needs to parameter to passed in `changes: SimpleChanges`
+
+- `ngOnInit()` will be called after constructor, when object is created
+
+- `ngDoCheck()` when change detection is ran, when something changed inside template, or event is present. 
+
+- `ngAfterContentInit()` ran after content been projected such as `ng-contet`
+
+- `ngAfterViewChecked()` after our view have been rendered
+
+- When using lifeCycle hooks, you should remember to implement interface
+
+<img src="lifeCycleCalls.JPG" alt="alt text" width="800"/>
+
+
+- Simple changes gets passed in 
+
+<img src="simpleChanges.JPG" alt="alt text" width="500"/>
+
+- 1. As you can see **SimpleChanges** holds element is bounded, which we previously defined
+  - Content, name, type
+
+<img src="boundedProperty.JPG" alt="alt text" width="500"/>
+
+- TODO heikki, selvitä mikä ero on kun Bindaus tapahtuu objectiin tai primitiivisen kentään. (Joku vaikutus Angularin Hook:ien kutsumiseen)
+
+<!--
+
+- When changing binded property, change from reference or change on object can be different.
+  - Will not trigger `ngOnChanges()`, depends on how was changes made, trough **reference** or **Object**
+
+-->
+
+- When firing such change
+
+```
+onChangeFirst(){
+  this.serverElements[0].name = 'Changed!'; referenc
+}
+```
+
+```
+@Input() name : string;
+```
+- When binded to primitive field, `ngOnChanges()` should be called in both components when value is updated 
+
+<img src="ngOnChanges()hook.JPG" alt="alt text" width="500"/>
+
+- **Constructor** and **ngOnInit()** were not called
+- You could use this if you want process before something is changing. **1.** Value to be updated and **2.** Value what was before.
+
+Todo jäin 6:20

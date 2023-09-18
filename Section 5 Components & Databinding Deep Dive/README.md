@@ -214,4 +214,7 @@ onChangeFirst(){
 - **Constructor** and **ngOnInit()** were not called
 - You could use this if you want process before something is changing. **1.** Value to be updated and **2.** Value what was before.
 
-Todo jäin 6:20
+- `ngDoCheck()` When angular checks for **any** changes, many checks happens here
+
+- `ngAfterContentInit()`
+

@@ -2,18 +2,22 @@
 
 ![Angular](angular.png)
 
-My OS will be Windows 10, so some notes are based on this operating system. This contains exercise files and my own notes alongside with them.<br/>
+My OS will be Windows 10, so some notes are based on this operating system. This contains exercise files and my own notes alongside with them.
+<br>
 
-All course material from **Angular - The Complete Guide (2022 Edition)** by Maximilian Schwarzmüller
+All course material from **Angular - The Complete Guide (2024 Edition)** by Maximilian Schwarzmüller
 
 If the content sparked :fire: your interest, please consider buying the course and start learning :book:
 
 [The Course at Udemy](https://www.udemy.com/course/the-complete-guide-to-angular-2/)   
 [Acade Mind](https://academind.com/)   
 
-
 **Note: The material provided in this repository is only for helping those who may get stuck at any point of time in the course. It is very advised that no one should just copy the solutions(violation of Honor Code) presented here.**
 
+<!-- 
+Linkedin puts this shit front, when clicking from private mode x(. Need to put this to make jump working every case
+?trk=public_profile_see-credential 
+-->
 
 Insert certificate here when completed
 
